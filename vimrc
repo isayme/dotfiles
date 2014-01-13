@@ -1,25 +1,27 @@
 #!/bin/bash
 
+source $(dirname $0)/echo_color.sh
+
 OPER=$1
 
 if [ "on" = "$OPER" ]; then
     if [ -e ~/.vimrc ]; then
-        echo ".vimrc already enabled~"
+        echo_green ".vimrc already enabled~"
         exit
     fi
 
-    echo "Enable ~/.vimrc"
+    echo_green "Enable ~/.vimrc"
     mv ~/.vimrc_bak ~/.vimrc
-    echo "Done~"
+    echo_green "Done~"
 elif [ "off" = "$OPER" ]; then
     if [ -e ~/.vimrc_bak ]; then
-        echo "./vimrc already disabled~"
+        echo_green "./vimrc already disabled~"
         exit
     fi
 
-    echo "Disable ~/.vimrc"
+    echo_green "Disable ~/.vimrc"
         mv ~/.vimrc ~/.vimrc_bak
-    echo "Done~"
+    echo_green "Done~"
 else
-    echo "not supported opertion \"$OPER\""
+    echo_red "not supported opertion \"$OPER\""
 fi
