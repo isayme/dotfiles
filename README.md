@@ -1,4 +1,6 @@
-linux_config
-============
+About
+=====
 
-All my configure files for better linux experience~
+Here is all my configure files for better linux experience ~
+
+If you like it, feel free to use it ~
