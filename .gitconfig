@@ -1,0 +1,15 @@
+[user]
+	name = isayme
+	email = isaymeorg@gmail.com
+[alias]
+	co = checkout
+	cm = commit -m
+	st = status
+	br = branch
+	rb = rebase
+	rs = reset
+    cl = clone
+    uncommit = reset --soft HEAD^
+    lg = log --pretty=oneline --graph  --abbrev-commit
+    amend = commit --amend
+    cb = checkout -b
